@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" >
+    <!--Do Not Lie-->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="description" content="Fill Me In">
+    <meta name="author" content="John Doe">
+    <link href="https://fonts.googleapis.com/css?family=Oswald&display=swap" rel="stylesheet">
+    <title>U-03 Guessing Game</title>
+    <link rel="stylesheet" href="/assets/scss/styles.css">
+</head>
+<body onload="guessingGame(); contentLoad();">
+    <header>
+        <div class="logo-head">
+            <div>
+                <h1 id="pageTitle"></h1>
+                <h2 id="pageSlogan"></h2>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section class="landing-page">
+            <h1>(High / Lo) Number Guessing Game</h1>
+            <h2>What I learned</h2>
+            <ul>
+                <li>Display Window Properties</li>
+                <li>Display Document Properties</li>
+            </ul>
+            <h2>Instructions</h2>
+            <p class="instructions">
+                The objective of the game is to try and guess the randomly chosen number (any number from 1 to 15) in as few tries as possible. You will be awarded a ribbon based upon your score.
+            </p>
+        </section>
+        <section class="guessingGame">
+            <div class="col1">
+                <h3>Play</h3>
+                <input type="number" id="numberGuess">
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p id="copyright">Copyright &copy; 2019 Ryan Hébert </p>
+    </footer>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
