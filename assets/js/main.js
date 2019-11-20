@@ -25,3 +25,8 @@ contentLoad = () =>
     pos1.textContent=`Guessing Game`
     pos2.textContent=`This is a simple number based guessing game.`
 }
+
+submitGuess() = () =>
+{
+    
+}

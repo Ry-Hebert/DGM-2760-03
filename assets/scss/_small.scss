@@ -47,7 +47,7 @@ header
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center right;
-    height: 50vh;
+    height: 30vh;
     div
     {
         justify-content: flex-start;
@@ -116,4 +116,19 @@ main
 {
     color: #fff;
     margin: .8rem;
+}
+
+.col1
+{
+    @extend %flex-col;
+    #numberGuess
+    {
+        border-radius: 20px;
+    }
+}
+
+.guessingGame
+{
+    @extend %flex-row;
+    
 }
