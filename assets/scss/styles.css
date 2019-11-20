@@ -91,7 +91,7 @@ footer, .guessingGame {
           flex-direction: row;
 }
 
-header, section, .col1 {
+header, section, .gGCol {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -113,7 +113,7 @@ section {
 
 body {
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-  padding: 0rem;
+  padding: 0rem 0rem 0rem 0rem;
   background-color: #111;
 }
 
@@ -126,14 +126,13 @@ header {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center right;
-  height: 30vh;
 }
 
 header div {
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
-  height: 20vh;
+  min-height: 25vh;
 }
 
 header div h1 {
@@ -195,7 +194,45 @@ main {
   margin: .8rem;
 }
 
-.col1 #numberGuess {
-  border-radius: 20px;
+.gGCol {
+  width: 50%;
+}
+
+.guessingGame {
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+#numberGuess {
+  border-radius: 10rem 0rem 0rem 10rem;
+  text-align: center;
+  width: 50%;
+}
+
+#subGuess {
+  border-radius: 0rem 10rem 10rem 0rem;
+  color: #111;
+  background-color: #fff;
+}
+
+input {
+  margin: 0rem;
+  padding: .2rem;
+}
+
+@media only screen and (min-width: 34rem) {
+  body {
+    padding: 2rem 2rem 0rem 2rem;
+  }
+  #numberGuess {
+    width: 8rem;
+  }
+}
+
+@media only screen and (min-width: 60rem) {
+  body {
+    padding: 5rem 5rem 0rem 5rem;
+  }
 }
 /*# sourceMappingURL=styles.css.map */

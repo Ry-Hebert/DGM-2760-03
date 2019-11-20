@@ -1,0 +1,15 @@
+body
+{
+    padding: 2rem 2rem 0rem 2rem;
+}
+
+#numberGuess
+{
+    width: 8rem;
+}
+
+.gGCol
+{
+    @extend %flex-col;
+    width: 25%;
+}

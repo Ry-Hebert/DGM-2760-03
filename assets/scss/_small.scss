@@ -32,7 +32,7 @@ $color1: #111;
 body
 {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    padding: 0rem;
+    padding: 0rem 0rem 0rem 0rem;
     background-color: #111;
 }
 
@@ -47,11 +47,10 @@ header
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center right;
-    height: 30vh;
     div
     {
         justify-content: flex-start;
-        height: 20vh;
+        min-height: 25vh;
         h1
         {
             font-size: 3.8rem;
@@ -118,17 +117,35 @@ main
     margin: .8rem;
 }
 
-.col1
+.gGCol
 {
     @extend %flex-col;
-    #numberGuess
-    {
-        border-radius: 20px;
-    }
+    width: 50%;
 }
 
 .guessingGame
 {
     @extend %flex-row;
+    justify-content: flex-start;
     
+}
+
+#numberGuess
+{
+    border-radius: 10rem 0rem 0rem 10rem;
+    text-align: center;
+    width: 50%;
+}
+
+#subGuess
+{
+    border-radius: 0rem 10rem 10rem 0rem;
+    color: #111;
+    background-color: #fff;
+}
+
+input
+{
+    margin: 0rem;
+    padding: .2rem;
 }
