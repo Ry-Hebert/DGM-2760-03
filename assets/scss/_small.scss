@@ -1,6 +1,6 @@
 $max-width: 100vw;
 
-$color1: #111;
+$color1: #222;
 
 %flex-row
 {
@@ -40,7 +40,7 @@ header
 {
     @extend %flex-col;
     font-size: 1.2rem;
-    width: 100vw;
+    width: 100%;
     margin: 0rem;
     padding: 0rem;
     color: #fff;
@@ -50,19 +50,20 @@ header
     div
     {
         justify-content: flex-start;
-        min-height: 25vh;
+        min-height: 40vh;
         h1
         {
             font-size: 3.8rem;
             padding-bottom: 0rem;
-            margin-bottom: -1rem;
+            margin-bottom: 1rem;
+            line-height: 4rem;
         }
     }
 }
 
 .landing-page
 {
-    min-height: 50vh;
+    min-height: 20vh;
 }
 
 section
@@ -92,7 +93,7 @@ section
 footer
 {
     @extend %flex-row, %just-cont-cent;   
-    width: 100vw;
+    width: 100%;
     background-color: $color1;
     height: 50px;
     font-size: 1rem;
@@ -127,6 +128,7 @@ main
 {
     @extend %flex-row;
     justify-content: flex-start;
+    min-height: 25vh;
     
 }
 
@@ -148,4 +150,9 @@ input
 {
     margin: 0rem;
     padding: .2rem;
+}
+
+.instructions
+{
+    margin-bottom: 4rem;
 }

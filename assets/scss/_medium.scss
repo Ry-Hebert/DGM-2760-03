@@ -10,6 +10,13 @@ body
 
 .gGCol
 {
-    @extend %flex-col;
     width: 25%;
+}
+
+header
+{
+    div
+    {
+        min-height: 20vh;
+    }
 }
