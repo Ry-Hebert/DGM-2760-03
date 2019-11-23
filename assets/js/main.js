@@ -1,4 +1,4 @@
-let guessCount = 0;
+let guessCount = 0
 
 // Because we're trying to get a random number between 1 and 15 we are going to pass 15 (Our number of numbers we're looking for) add then add +1 to the results of randomGen(15)(Which should provided us with numbers between 0-14) so that our value of randomNumber will be somewhere between 1-15.
 const randomNumber = randomGen(15) + 1
@@ -9,7 +9,12 @@ checkGuess = (x, y) =>
 {
     let check = x == y
     console.log(check)
-    return check
+    if(check == true){return check}
+    else
+    {
+        if(x > y){return 'Your Guess was Too High'}
+        else{return 'Your Guess was Too Low'}
+    }
 }
 
 contentLoad = () =>
@@ -38,8 +43,38 @@ submitGuess() = () =>
     {
         let check = checkGuess(guess, randomNumber)
 
-        if(check == true){}
-        else{}
+        if(check == true)
+        {
+            document.querySelector('#feedback').textContent(`You are Correct!`)
+            guessCount++
+            document.querySelector('#tryCount').textContent(guessCount)
+
+            document.querySelector('#feedback').textContent(`You are Correct!`)
+            switch(guessCount)
+            {
+                case 1:
+                case 2:
+                case 3:
+                    document.querySelector('#playerAward').className(firstP)
+                    break;
+                case 4:
+                case 5:
+                case 6:
+                    document.querySelector('#playerAward').className(secondP)
+                    break;
+                default:
+                    document.querySelector('#playerAward').className(thirdP)
+                    break;
+
+            }
+
+        }
+        else
+        {
+            document.querySelector('#feedback').textContent(check)
+            guessCount++
+            document.querySelector('#tryCount').textContent(guessCount)
+        }
 
     }
 
