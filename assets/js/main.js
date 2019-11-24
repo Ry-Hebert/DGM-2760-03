@@ -1,9 +1,10 @@
 let guessCount = 0
-
-// Because we're trying to get a random number between 1 and 15 we are going to pass 15 (Our number of numbers we're looking for) add then add +1 to the results of randomGen(15)(Which should provided us with numbers between 0-14) so that our value of randomNumber will be somewhere between 1-15.
-const randomNumber = randomGen(15) + 1
-// Generates a more cryptographically secure random number than simply (Math.random). The % operator returns the remainder of the random number divided by 15.
+let findVar = 15
 randomGen = (x) =>{return window.crypto.getRandomValues(new Uint32Array(1))[0] % x}
+// Because we're trying to get a random number between 1 and 15 we are going to pass 15 (Our number of numbers we're looking for) add then add +1 to the results of randomGen(15)(Which should provided us with numbers between 0-14) so that our value of randomNumber will be somewhere between 1-15.
+const randomNumber = randomGen(findVar) + 1
+// Generates a more cryptographically secure random number than simply (Math.random). The % operator returns the remainder of the random number divided by 15.
+
 
 checkGuess = (x, y) =>
 {
@@ -26,8 +27,11 @@ contentLoad = () =>
     pos2.textContent=`This is a simple number based guessing game.`
 }
 
-submitGuess() = () =>
+submitGuess = () =>
 {
+    let feedbackR = null
+    let tryCountR = null
+    let playerAwardR = null
     // Logged to Console for testing purposes.
     console.log(`Random Number is: ${randomNumber}`)
     let guess = document.querySelector('#numberGuess').value;
@@ -37,7 +41,8 @@ submitGuess() = () =>
 
     if(guess < 1 || guess > 15)
     {
-        document.querySelector('#feedback').textContent(`Please chose a number between 1 and 15`)
+        feedbackR = document.querySelector('#feedback')
+        feedbackR.textContent = 'Please chose a number between 1 and 15'
     }
     else
     {
@@ -45,35 +50,41 @@ submitGuess() = () =>
 
         if(check == true)
         {
-            document.querySelector('#feedback').textContent(`You are Correct!`)
-            guessCount++
-            document.querySelector('#tryCount').textContent(guessCount)
+            feedbackR = document.querySelector('#feedback')
+            feedbackR.textContent = 'You are Correct!'
 
-            document.querySelector('#feedback').textContent(`You are Correct!`)
+            guessCount++
+            tryCountR = document.querySelector('#tryCount')
+            tryCountR.textContent = guessCount
             switch(guessCount)
             {
                 case 1:
                 case 2:
                 case 3:
-                    document.querySelector('#playerAward').className(firstP)
-                    break;
+                    playerAwardR = document.querySelector('#playerAward')
+                    playerAwardR.className = 'firstP'
+                    break
                 case 4:
                 case 5:
                 case 6:
-                    document.querySelector('#playerAward').className(secondP)
-                    break;
+                    playerAwardR = document.querySelector('#playerAward')
+                    playerAwardR.className = 'secondP'
+                    break
                 default:
-                    document.querySelector('#playerAward').className(thirdP)
-                    break;
+                    playerAwardR = document.querySelector('#playerAward')
+                    playerAwardR.className = 'thirdP'
+                    break
 
             }
 
         }
         else
         {
-            document.querySelector('#feedback').textContent(check)
+            feedbackR = document.querySelector('#feedback')
+            feedbackR.textContent = check
             guessCount++
-            document.querySelector('#tryCount').textContent(guessCount)
+            tryCountR = document.querySelector('#tryCount')
+            tryCountR.textContent = guessCount
         }
 
     }
