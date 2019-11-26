@@ -227,6 +227,24 @@ input {
   margin-bottom: 4rem;
 }
 
+#playerAward {
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.firstP {
+  background-image: url(/assets/img/1stPR.svg);
+}
+
+.secondP {
+  background-image: url(/assets/img/2ndPR.svg);
+}
+
+.thirdP {
+  background-image: url(/assets/img/3rdPR.svg);
+}
+
 @media only screen and (min-width: 34rem) {
   body {
     padding: 2rem 2rem 0rem 2rem;

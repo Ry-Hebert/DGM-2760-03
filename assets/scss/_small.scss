@@ -156,3 +156,25 @@ input
 {
     margin-bottom: 4rem;
 }
+
+#playerAward
+{
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.firstP
+{
+background-image: url(/assets/img/1stPR.svg);
+}
+
+.secondP
+{
+background-image: url(/assets/img/2ndPR.svg);
+}
+
+.thirdP
+{
+background-image: url(/assets/img/3rdPR.svg);
+}
